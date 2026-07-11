@@ -1,0 +1,478 @@
+; Assembly listing for method DisasmProof.Program:SumOverInterface(System.Collections.Generic.IEnumerable`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; fully interruptible
+
+G_M000_IG01:                ;; offset=0x0000
+       push     rbp
+       sub      rsp, 192
+       lea      rbp, [rsp+0xC0]
+       xor      eax, eax
+       mov      qword ptr [rbp-0x98], rax
+       vxorps   xmm4, xmm4, xmm4
+       vmovdqa  xmmword ptr [rbp-0x90], xmm4
+       vmovdqa  xmmword ptr [rbp-0x80], xmm4
+       vmovdqa  xmmword ptr [rbp-0x70], xmm4
+       vmovdqa  xmmword ptr [rbp-0x60], xmm4
+       vmovdqa  xmmword ptr [rbp-0x50], xmm4
+       mov      qword ptr [rbp-0x40], rax
+       mov      qword ptr [rbp-0xA0], rsp
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:                ;; offset=0x0048
+       xor      ecx, ecx
+       mov      dword ptr [rbp-0x3C], ecx
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      gword ptr [rbp-0x58], rcx
+       mov      rcx, gword ptr [rbp-0x58]
+       mov      rdx, 0x7FF9F13B60D0
+       call     CORINFO_HELP_CLASSPROFILE32
+       mov      rcx, gword ptr [rbp-0x58]
+       mov      gword ptr [rbp-0x80], rcx
+       mov      rcx, gword ptr [rbp-0x80]
+       mov      r11, 0x7FF9F1170008
+       call     [r11]System.Collections.Generic.IEnumerable`1[int]:GetEnumerator():System.Collections.Generic.IEnumerator`1[int]:this
+       mov      gword ptr [rbp-0x48], rax
+       mov      dword ptr [rbp-0x78], 0x3E8
+ 
+G_M000_IG03:                ;; offset=0x008C
+       jmp      SHORT G_M000_IG05
+ 
+G_M000_IG04:                ;; offset=0x008E
+       mov      rcx, 0x7FF9F13B61D8
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp-0x48]
+       mov      gword ptr [rbp-0x60], rcx
+       mov      rcx, gword ptr [rbp-0x60]
+       mov      rdx, 0x7FF9F13B61E0
+       call     CORINFO_HELP_CLASSPROFILE32
+       mov      rcx, gword ptr [rbp-0x60]
+       mov      gword ptr [rbp-0x88], rcx
+       mov      rcx, gword ptr [rbp-0x88]
+       mov      r11, 0x7FF9F1170018
+       call     [r11]System.Collections.Generic.IEnumerator`1[int]:get_Current():int:this
+       mov      dword ptr [rbp-0x4C], eax
+       mov      ecx, dword ptr [rbp-0x3C]
+       add      ecx, dword ptr [rbp-0x4C]
+       mov      dword ptr [rbp-0x3C], ecx
+ 
+G_M000_IG05:                ;; offset=0x00E3
+       mov      ecx, dword ptr [rbp-0x78]
+       dec      ecx
+       mov      dword ptr [rbp-0x78], ecx
+       cmp      dword ptr [rbp-0x78], 0
+       jg       SHORT G_M000_IG07
+ 
+G_M000_IG06:                ;; offset=0x00F1
+       lea      rcx, [rbp-0x78]
+       mov      edx, 22
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG07:                ;; offset=0x00FF
+       mov      rcx, gword ptr [rbp-0x48]
+       mov      gword ptr [rbp-0x68], rcx
+       mov      rcx, gword ptr [rbp-0x68]
+       mov      rdx, 0x7FF9F13B62E8
+       call     CORINFO_HELP_CLASSPROFILE32
+       mov      rcx, gword ptr [rbp-0x68]
+       mov      gword ptr [rbp-0x90], rcx
+       mov      rcx, gword ptr [rbp-0x90]
+       mov      r11, 0x7FF9F1170010
+       call     [r11]System.Collections.IEnumerator:MoveNext():bool:this
+       test     eax, eax
+       jne      G_M000_IG04
+ 
+G_M000_IG08:                ;; offset=0x0141
+       mov      rcx, rsp
+       call     G_M000_IG12
+ 
+G_M000_IG09:                ;; offset=0x0149
+       nop      
+ 
+G_M000_IG10:                ;; offset=0x014A
+       mov      rcx, 0x7FF9F13B6504
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG11:                ;; offset=0x015C
+       add      rsp, 192
+       pop      rbp
+       ret      
+ 
+G_M000_IG12:                ;; offset=0x0165
+       push     rbp
+       sub      rsp, 48
+       mov      rbp, qword ptr [rcx+0x20]
+       mov      qword ptr [rsp+0x20], rbp
+       lea      rbp, [rbp+0xC0]
+ 
+G_M000_IG13:                ;; offset=0x017A
+       cmp      gword ptr [rbp-0x48], 0
+       je       SHORT G_M000_IG14
+       mov      rcx, 0x7FF9F13B63F0
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp-0x48]
+       mov      gword ptr [rbp-0x70], rcx
+       mov      rcx, gword ptr [rbp-0x70]
+       mov      rdx, 0x7FF9F13B63F8
+       call     CORINFO_HELP_CLASSPROFILE32
+       mov      rcx, gword ptr [rbp-0x70]
+       mov      gword ptr [rbp-0x98], rcx
+       mov      rcx, gword ptr [rbp-0x98]
+       mov      r11, 0x7FF9F1170020
+       call     [r11]System.IDisposable:Dispose():this
+ 
+G_M000_IG14:                ;; offset=0x01CA
+       mov      rcx, 0x7FF9F13B6500
+       call     CORINFO_HELP_COUNTPROFILE32
+       nop      
+ 
+G_M000_IG15:                ;; offset=0x01DA
+       add      rsp, 48
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 480
+
+; Assembly listing for method DisasmProof.Program:SumOverInterface(System.Collections.Generic.IEnumerable`1[int]):int (Instrumented Tier0)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Instrumented Tier0 code
+; rbp based frame
+; fully interruptible
+
+G_M000_IG01:                ;; offset=0x0000
+       push     rbp
+       sub      rsp, 192
+       lea      rbp, [rsp+0xC0]
+       xor      eax, eax
+       mov      qword ptr [rbp-0x98], rax
+       vxorps   xmm4, xmm4, xmm4
+       vmovdqa  xmmword ptr [rbp-0x90], xmm4
+       vmovdqa  xmmword ptr [rbp-0x80], xmm4
+       vmovdqa  xmmword ptr [rbp-0x70], xmm4
+       vmovdqa  xmmword ptr [rbp-0x60], xmm4
+       vmovdqa  xmmword ptr [rbp-0x50], xmm4
+       mov      qword ptr [rbp-0x40], rax
+       mov      qword ptr [rbp-0xA0], rsp
+       mov      gword ptr [rbp+0x10], rcx
+ 
+G_M000_IG02:                ;; offset=0x0048
+       xor      ecx, ecx
+       mov      dword ptr [rbp-0x3C], ecx
+       mov      rcx, gword ptr [rbp+0x10]
+       mov      gword ptr [rbp-0x58], rcx
+       mov      rcx, gword ptr [rbp-0x58]
+       mov      rdx, 0x7FF9F13B60D0
+       call     CORINFO_HELP_CLASSPROFILE32
+       mov      rcx, gword ptr [rbp-0x58]
+       mov      gword ptr [rbp-0x80], rcx
+       mov      rcx, gword ptr [rbp-0x80]
+       mov      r11, 0x7FF9F1170028
+       call     [r11]System.Collections.Generic.IEnumerable`1[int]:GetEnumerator():System.Collections.Generic.IEnumerator`1[int]:this
+       mov      gword ptr [rbp-0x48], rax
+       mov      dword ptr [rbp-0x78], 0x3E8
+ 
+G_M000_IG03:                ;; offset=0x008C
+       jmp      SHORT G_M000_IG05
+ 
+G_M000_IG04:                ;; offset=0x008E
+       mov      rcx, 0x7FF9F13B61D8
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp-0x48]
+       mov      gword ptr [rbp-0x60], rcx
+       mov      rcx, gword ptr [rbp-0x60]
+       mov      rdx, 0x7FF9F13B61E0
+       call     CORINFO_HELP_CLASSPROFILE32
+       mov      rcx, gword ptr [rbp-0x60]
+       mov      gword ptr [rbp-0x88], rcx
+       mov      rcx, gword ptr [rbp-0x88]
+       mov      r11, 0x7FF9F1170038
+       call     [r11]System.Collections.Generic.IEnumerator`1[int]:get_Current():int:this
+       mov      dword ptr [rbp-0x4C], eax
+       mov      ecx, dword ptr [rbp-0x3C]
+       add      ecx, dword ptr [rbp-0x4C]
+       mov      dword ptr [rbp-0x3C], ecx
+ 
+G_M000_IG05:                ;; offset=0x00E3
+       mov      ecx, dword ptr [rbp-0x78]
+       dec      ecx
+       mov      dword ptr [rbp-0x78], ecx
+       cmp      dword ptr [rbp-0x78], 0
+       jg       SHORT G_M000_IG07
+ 
+G_M000_IG06:                ;; offset=0x00F1
+       lea      rcx, [rbp-0x78]
+       mov      edx, 22
+       call     CORINFO_HELP_PATCHPOINT
+ 
+G_M000_IG07:                ;; offset=0x00FF
+       mov      rcx, gword ptr [rbp-0x48]
+       mov      gword ptr [rbp-0x68], rcx
+       mov      rcx, gword ptr [rbp-0x68]
+       mov      rdx, 0x7FF9F13B62E8
+       call     CORINFO_HELP_CLASSPROFILE32
+       mov      rcx, gword ptr [rbp-0x68]
+       mov      gword ptr [rbp-0x90], rcx
+       mov      rcx, gword ptr [rbp-0x90]
+       mov      r11, 0x7FF9F1170030
+       call     [r11]System.Collections.IEnumerator:MoveNext():bool:this
+       test     eax, eax
+       jne      G_M000_IG04
+ 
+G_M000_IG08:                ;; offset=0x0141
+       mov      rcx, rsp
+       call     G_M000_IG12
+ 
+G_M000_IG09:                ;; offset=0x0149
+       nop      
+ 
+G_M000_IG10:                ;; offset=0x014A
+       mov      rcx, 0x7FF9F13B6504
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      eax, dword ptr [rbp-0x3C]
+ 
+G_M000_IG11:                ;; offset=0x015C
+       add      rsp, 192
+       pop      rbp
+       ret      
+ 
+G_M000_IG12:                ;; offset=0x0165
+       push     rbp
+       sub      rsp, 48
+       mov      rbp, qword ptr [rcx+0x20]
+       mov      qword ptr [rsp+0x20], rbp
+       lea      rbp, [rbp+0xC0]
+ 
+G_M000_IG13:                ;; offset=0x017A
+       cmp      gword ptr [rbp-0x48], 0
+       je       SHORT G_M000_IG14
+       mov      rcx, 0x7FF9F13B63F0
+       call     CORINFO_HELP_COUNTPROFILE32
+       mov      rcx, gword ptr [rbp-0x48]
+       mov      gword ptr [rbp-0x70], rcx
+       mov      rcx, gword ptr [rbp-0x70]
+       mov      rdx, 0x7FF9F13B63F8
+       call     CORINFO_HELP_CLASSPROFILE32
+       mov      rcx, gword ptr [rbp-0x70]
+       mov      gword ptr [rbp-0x98], rcx
+       mov      rcx, gword ptr [rbp-0x98]
+       mov      r11, 0x7FF9F1170040
+       call     [r11]System.IDisposable:Dispose():this
+ 
+G_M000_IG14:                ;; offset=0x01CA
+       mov      rcx, 0x7FF9F13B6500
+       call     CORINFO_HELP_COUNTPROFILE32
+       nop      
+ 
+G_M000_IG15:                ;; offset=0x01DA
+       add      rsp, 48
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 480
+
+; Assembly listing for method DisasmProof.Program:SumOverInterface(System.Collections.Generic.IEnumerable`1[int]):int (Tier1)
+; Emitting BLENDED_CODE for X64 with AVX - Windows
+; Tier1 code
+; optimized code
+; optimized using Dynamic PGO
+; rbp based frame
+; fully interruptible
+; with Dynamic PGO: edge weights are invalid, and fgCalledCount is 20704
+; 2 inlinees with PGO data; 1 single block inlinees; 0 inlinees without PGO data
+
+G_M000_IG01:                ;; offset=0x0000
+       push     rbp
+       push     r15
+       push     r14
+       push     rdi
+       push     rsi
+       push     rbx
+       sub      rsp, 56
+       lea      rbp, [rsp+0x60]
+       mov      qword ptr [rbp-0x40], rsp
+ 
+G_M000_IG02:                ;; offset=0x0015
+       xor      ebx, ebx
+       mov      r11, 0x7FF9F1170048
+       call     [r11]System.Collections.Generic.IEnumerable`1[int]:GetEnumerator():System.Collections.Generic.IEnumerator`1[int]:this
+       mov      rcx, rax
+       mov      gword ptr [rbp-0x30], rcx
+ 
+G_M000_IG03:                ;; offset=0x002B
+       test     rcx, rcx
+       je       G_M000_IG14
+       mov      rsi, qword ptr [rcx]
+       mov      rdi, 0x7FF9F13B68E8
+       cmp      rsi, rdi
+       jne      G_M000_IG14
+       jmp      SHORT G_M000_IG06
+ 
+G_M000_IG04:                ;; offset=0x004C
+       mov      r8, rcx
+       mov      r10d, dword ptr [r8+0x08]
+       cmp      r10d, dword ptr [r8+0x0C]
+       jae      G_M000_IG18
+       mov      r14, gword ptr [r8+0x10]
+       cmp      r10d, dword ptr [r14+0x08]
+       jae      SHORT G_M000_IG08
+       mov      eax, r10d
+       mov      r15d, dword ptr [r14+4*rax+0x10]
+ 
+G_M000_IG05:                ;; offset=0x006F
+       add      ebx, r15d
+ 
+G_M000_IG06:                ;; offset=0x0072
+       cmp      rsi, rdi
+       jne      SHORT G_M000_IG10
+       mov      rax, rcx
+       mov      edx, dword ptr [rax+0x08]
+       inc      edx
+       mov      r11d, dword ptr [rax+0x0C]
+       cmp      edx, r11d
+       jae      SHORT G_M000_IG09
+ 
+G_M000_IG07:                ;; offset=0x0088
+       mov      dword ptr [rax+0x08], edx
+       jmp      SHORT G_M000_IG04
+ 
+G_M000_IG08:                ;; offset=0x008D
+       call     CORINFO_HELP_RNGCHKFAIL
+ 
+G_M000_IG09:                ;; offset=0x0092
+       mov      dword ptr [rax+0x08], r11d
+       jmp      G_M000_IG21
+ 
+G_M000_IG10:                ;; offset=0x009B
+       mov      r11, 0x7FF9F1170050
+       call     [r11]System.Collections.IEnumerator:MoveNext():bool:this
+       test     eax, eax
+       jne      SHORT G_M000_IG19
+ 
+G_M000_IG11:                ;; offset=0x00AC
+       mov      rcx, gword ptr [rbp-0x30]
+       jmp      G_M000_IG21
+ 
+G_M000_IG12:                ;; offset=0x00B5
+       mov      r8, rcx
+       mov      r10d, dword ptr [r8+0x08]
+       cmp      r10d, dword ptr [r8+0x0C]
+       jae      SHORT G_M000_IG18
+       mov      r14, gword ptr [r8+0x10]
+       cmp      r10d, dword ptr [r14+0x08]
+       jae      SHORT G_M000_IG08
+       mov      eax, r10d
+       mov      r15d, dword ptr [r14+4*rax+0x10]
+ 
+G_M000_IG13:                ;; offset=0x00D4
+       add      ebx, r15d
+ 
+G_M000_IG14:                ;; offset=0x00D7
+       mov      rsi, qword ptr [rcx]
+       mov      rdi, 0x7FF9F13B68E8
+       cmp      rsi, rdi
+       jne      SHORT G_M000_IG20
+       mov      rax, rcx
+       mov      edx, dword ptr [rax+0x08]
+       inc      edx
+       mov      r11d, dword ptr [rax+0x0C]
+       cmp      edx, r11d
+       jae      SHORT G_M000_IG16
+ 
+G_M000_IG15:                ;; offset=0x00FA
+       mov      dword ptr [rax+0x08], edx
+       jmp      SHORT G_M000_IG12
+ 
+G_M000_IG16:                ;; offset=0x00FF
+       mov      dword ptr [rax+0x08], r11d
+       jmp      SHORT G_M000_IG21
+ 
+G_M000_IG17:                ;; offset=0x0105
+       mov      r11, 0x7FF9F1170058
+       call     [r11]System.Collections.Generic.IEnumerator`1[int]:get_Current():int:this
+       mov      r15d, eax
+       mov      rcx, gword ptr [rbp-0x30]
+       jmp      SHORT G_M000_IG13
+ 
+G_M000_IG18:                ;; offset=0x011B
+       mov      ecx, dword ptr [r8+0x08]
+       call     [System.ThrowHelper:ThrowInvalidOperationException_EnumCurrent(int)]
+       int3     
+ 
+G_M000_IG19:                ;; offset=0x0126
+       mov      rcx, gword ptr [rbp-0x30]
+       mov      r11, 0x7FF9F1170058
+       call     [r11]System.Collections.Generic.IEnumerator`1[int]:get_Current():int:this
+       mov      r15d, eax
+       mov      rcx, gword ptr [rbp-0x30]
+       jmp      G_M000_IG05
+ 
+G_M000_IG20:                ;; offset=0x0143
+       mov      r11, 0x7FF9F1170050
+       call     [r11]System.Collections.IEnumerator:MoveNext():bool:this
+       test     eax, eax
+       mov      rcx, gword ptr [rbp-0x30]
+       jne      SHORT G_M000_IG17
+ 
+G_M000_IG21:                ;; offset=0x0158
+       cmp      rsi, rdi
+       jne      SHORT G_M000_IG24
+ 
+G_M000_IG22:                ;; offset=0x015D
+       mov      eax, ebx
+ 
+G_M000_IG23:                ;; offset=0x015F
+       add      rsp, 56
+       pop      rbx
+       pop      rsi
+       pop      rdi
+       pop      r14
+       pop      r15
+       pop      rbp
+       ret      
+ 
+G_M000_IG24:                ;; offset=0x016C
+       mov      r11, 0x7FF9F1170060
+       call     [r11]System.IDisposable:Dispose():this
+       jmp      SHORT G_M000_IG22
+ 
+G_M000_IG25:                ;; offset=0x017B
+       push     rbp
+       push     r15
+       push     r14
+       push     rdi
+       push     rsi
+       push     rbx
+       sub      rsp, 40
+       mov      rbp, qword ptr [rcx+0x20]
+       mov      qword ptr [rsp+0x20], rbp
+       lea      rbp, [rbp+0x60]
+ 
+G_M000_IG26:                ;; offset=0x0194
+       cmp      gword ptr [rbp-0x30], 0
+       je       SHORT G_M000_IG27
+       mov      rcx, gword ptr [rbp-0x30]
+       mov      rsi, qword ptr [rcx]
+       mov      rdi, 0x7FF9F13B68E8
+       cmp      rsi, rdi
+       je       SHORT G_M000_IG27
+       mov      r11, 0x7FF9F1170060
+       call     [r11]System.IDisposable:Dispose():this
+ 
+G_M000_IG27:                ;; offset=0x01BE
+       nop      
+ 
+G_M000_IG28:                ;; offset=0x01BF
+       add      rsp, 40
+       pop      rbx
+       pop      rsi
+       pop      rdi
+       pop      r14
+       pop      r15
+       pop      rbp
+       ret      
+ 
+; Total bytes of code 460
+
+26163200000
